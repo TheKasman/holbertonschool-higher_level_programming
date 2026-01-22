@@ -3,5 +3,5 @@ import sys
 if __name__ == "__main__":
     count = len(sys.argv) - 1
     for i in range(1, len(sys.argv)):
-        result = int(sys.argv[i]) + int(sys.argv[i + 1])
+        result += int(sys.argv[i])
         print("{}".format(result))
