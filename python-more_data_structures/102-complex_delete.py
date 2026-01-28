@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 def complex_delete(a_dictionary, value):
     if not a_dictionary:
         return a_dictionary
