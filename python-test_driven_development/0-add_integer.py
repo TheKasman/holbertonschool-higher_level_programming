@@ -9,6 +9,7 @@ def add_integer(a, b=98):
     """
     Adds two integers together and returns the result
     a and b must be integers (floats are truncated to integers)
+    Raises TypeError for invalid inputs, including NaN or infinity.
 
     >>> add_integer(1, 2)
     3
