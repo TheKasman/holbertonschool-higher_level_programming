@@ -26,10 +26,13 @@ def add_integer(a, b=98):
     Traceback (most recent call last):
     TypeError: a must be an integer
     """
-    if not isinstance(a, (int, float)) or a != a or a == \
-            float('inf') or a == float('-inf'):
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)) or b != b or b == \
-            float('inf') or b == float('-inf'):
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+    # Explicitly check for NaN or infinity BEFORE converting
+    if isinstance(a, float) and (a != a or a in (float('inf'), float('-inf'))):
+        raise TypeError("a must be an integer")
+    if isinstance(b, float) and (b != b or b in (float('inf'), float('-inf'))):
         raise TypeError("b must be an integer")
     return int(a) + int(b)
