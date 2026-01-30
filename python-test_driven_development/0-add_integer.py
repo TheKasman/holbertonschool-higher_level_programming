@@ -26,7 +26,7 @@ def add_integer(a, b=98):
     Traceback (most recent call last):
     TypeError: a must be an integer
     """
-    # Reject Nan/inf
+    # Reject Nan/inf... man what even
     if isinstance(a, float) and (a != a or a == float('inf') or a == float('-inf')):
         raise TypeError("a must be an integer")
     
