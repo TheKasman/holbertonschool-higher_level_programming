@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+0-add_integer.py
+Module for adding two integers together with doctest examples
+"""
+
+
 def add_integer(a, b=98):
     """
     Adds two integers together and returns the result
@@ -19,8 +25,6 @@ def add_integer(a, b=98):
     Traceback (most recent call last):
     TypeError: a must be an integer
     """
-
-
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
