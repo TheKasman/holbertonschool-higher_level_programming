@@ -32,7 +32,7 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if isinstance(b, float) and (b != b or b == float('inf')
                                  or b == float('-inf')):
-        raise TypeError("a must be an integer")
+        raise TypeError("b must be an integer")
     # Type checks
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
