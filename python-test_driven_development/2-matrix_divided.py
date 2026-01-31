@@ -25,7 +25,17 @@ def matrix_divided(matrix, div):
     >>> matrix_divided(matrix, 'nan')
     Traceback (most recent call last):
     TypeError: div must be a number
-
+       >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+    >>> matrix_divided(matrix, )
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
     """
     # Validate matrix
     if not isinstance(matrix, list) or not all(isinstance(row, list)
