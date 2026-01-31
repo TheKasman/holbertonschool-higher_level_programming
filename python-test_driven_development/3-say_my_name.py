@@ -27,7 +27,7 @@ def say_my_name(first_name, last_name=""):
     TypeError: say_my_name() missing 1
       required positional argument: 'first_name'
 
-    >>> say_my_name("Walter", 12)
+    >>> say_my_name("Bob", 12)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
