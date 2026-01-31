@@ -7,8 +7,8 @@ Args:
     size: the size of the square we want
 """
 
-def print_square(size):
 
+def print_square(size):
     """
     >>> print_square(3)
     ###
@@ -31,13 +31,10 @@ def print_square(size):
 
     if not isinstance(size, (int, float)):
         raise TypeError("size must be an integer")
-    
     if isinstance(size, int) and size < 0:
         raise ValueError("size must be >= 0")
-    
     if isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
-    
     size = int(size)
     for i in range(size):
         for j in range(size):
