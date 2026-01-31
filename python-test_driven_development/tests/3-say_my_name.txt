@@ -1,5 +1,5 @@
 >>> import importlib.machinery
->>> say_my_name = importlib.machinery.SourceFileLoader("say_my_name", "2-say_my_name.py").load_module().say_my_name
+>>> say_my_name = importlib.machinery.SourceFileLoader("say_my_name", "3-say_my_name.py").load_module().say_my_name
 
 >>> say_my_name("Walter", "White")
 My name is Walter White
