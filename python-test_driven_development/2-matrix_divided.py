@@ -17,6 +17,15 @@ def matrix_divided(matrix, div):
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    >>> matrix = [[1, 2, 3], [4]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 'nan')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
     """
     # Validate matrix
     if not isinstance(matrix, list) or not all(isinstance(row, list)
