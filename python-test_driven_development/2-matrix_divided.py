@@ -33,9 +33,13 @@ def matrix_divided(matrix, div):
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
     >>> matrix_divided()
     Traceback (most recent call last):
-    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+    TypeError: matrix_divided() missing 2 required positional arguments:
+      'matrix' and 'div'
     >>> matrix_divided(matrix, float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+    >>> matrix_divided('derp', 1)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
     """
     # Validate matrix
     if not isinstance(matrix, list) or not all(isinstance(row, list)
