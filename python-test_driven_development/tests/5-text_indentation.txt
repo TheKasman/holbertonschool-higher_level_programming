@@ -7,3 +7,8 @@ TypeError: text must be a string
 
 >>> text_indentation("Lorem ipsum:")
 Lorem ipsum:
+
+>>> text_indentation("Lorem ipsum: why")
+Lorem ipsum:
+
+why 

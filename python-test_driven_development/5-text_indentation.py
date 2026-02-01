@@ -14,6 +14,9 @@ def text_indentation(text):
     Traceback (most recent call last):
     TypeError: text must be a string
 
+    >>> text_indentation("Lorem ipsum:")
+    Lorem ipsum:
+
     >>> text_indentation("Lorem ipsum: why")
     Lorem ipsum:
 
@@ -32,6 +35,6 @@ def text_indentation(text):
         skip_space = False
         print(char, end="")
 
-        if char in ".?:":
+        if char in ".?:" and i != len(text) - 1:
             print("\n")
             skip_space = True
