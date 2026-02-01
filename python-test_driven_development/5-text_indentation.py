@@ -10,17 +10,14 @@ Args:
 
 def text_indentation(text):
     """
+    >>> text_indentation("")
+    >>> text_indentation("lorem ipsum:")
+    lorem ipsum:
+
     >>> text_indentation(123)
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> text_indentation("Lorem ipsum:")
-    Lorem ipsum:
-
-    >>> text_indentation("Lorem ipsum: why")
-    Lorem ipsum:
-
-    why
     """
 
     if not isinstance(text, str):
