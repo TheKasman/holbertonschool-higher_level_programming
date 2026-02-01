@@ -18,6 +18,12 @@ def text_indentation(text):
     Traceback (most recent call last):
     TypeError: text must be a string
 
+    >>> text_indentation("Lorem ipsum: why")
+    Lorem ipsum:
+
+    why
+
+
     """
 
     if not isinstance(text, str):
