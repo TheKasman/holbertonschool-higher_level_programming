@@ -22,8 +22,6 @@ def text_indentation(text):
     Lorem ipsum:
 
     why
-
-
     """
 
     if not isinstance(text, str):
