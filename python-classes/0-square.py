@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 class Square:
-    pass
+    """A basic square class"""
+    def __init__(self, theType):
+        self.type = theType
