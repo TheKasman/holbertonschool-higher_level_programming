@@ -28,13 +28,14 @@ def text_indentation(text):
 
     skip_space = False
 
-    for char in text:
+    for idx, char in enumerate(text):
         if skip_space and char == " ":
             continue
 
         skip_space = False
         print(char, end="")
 
-        if char in ".?:" and char != len(text) - 1:
-            print("\n")
-            skip_space = True
+        if char in ".?:":
+            if idx != len(text) - 1:
+                print("\n")
+                skip_space = True
