@@ -35,6 +35,6 @@ def text_indentation(text):
         skip_space = False
         print(char, end="")
 
-        if char in ".?:" and i != len(text) - 1:
+        if char in ".?:" and char != len(text) - 1:
             print("\n")
             skip_space = True
