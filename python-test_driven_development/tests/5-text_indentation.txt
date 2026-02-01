@@ -11,5 +11,5 @@ TypeError: text must be a string
 
 >>> text_indentation("Lorem ipsum: why")
 Lorem ipsum:
-
+<BLANKLINE>
 why
