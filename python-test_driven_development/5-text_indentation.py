@@ -10,6 +10,8 @@ Args:
 
 def text_indentation(text):
     """
+    Prints text with two newlines after '.', '?', or ':'
+
     >>> text_indentation("")
     >>> text_indentation("lorem ipsum:")
     lorem ipsum:
@@ -21,9 +23,8 @@ def text_indentation(text):
     >>> text_indentation("Lorem ipsum: why")
     Lorem ipsum:
 
-    why>>>
+    why
     """
-
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
