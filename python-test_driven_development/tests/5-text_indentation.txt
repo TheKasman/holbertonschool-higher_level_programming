@@ -1,0 +1,11 @@
+>>> import importlib.machinery
+>>> text_indentation = importlib.machinery.SourceFileLoader("text_indentation", "5-text_indentation.py").load_module().text_indentation
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("Lorem ipsum: why")
+Lorem ipsum:
+
+why 

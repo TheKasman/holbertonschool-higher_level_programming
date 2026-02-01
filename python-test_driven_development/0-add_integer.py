@@ -25,6 +25,12 @@ def add_integer(a, b=98):
     >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
+    >>> add_integer(1e909)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
