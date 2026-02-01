@@ -8,3 +8,8 @@ lorem ipsum:
 >>> text_indentation(123)
 Traceback (most recent call last):
 TypeError: text must be a string
+
+>>> text_indentation("Lorem ipsum: why")
+Lorem ipsum:
+
+why
