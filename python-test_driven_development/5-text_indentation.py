@@ -21,7 +21,7 @@ def text_indentation(text):
     >>> text_indentation("Lorem ipsum: why")
     Lorem ipsum:
 
-    why
+    why>>>
     """
 
     if not isinstance(text, str):
