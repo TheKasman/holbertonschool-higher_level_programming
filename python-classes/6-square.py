@@ -22,11 +22,11 @@ class Square:
         if self.size == 0:
             print()
             return
-        for i in range(self.size):
-            for j in range(self.size):
-                print("#", end="")
+        for _ in range(self.position[1]):
             print()
-
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
+        
     #  SIZE PROPERTY
     @property
     def size(self):
@@ -48,7 +48,7 @@ class Square:
         """Returns the position"""
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """Sets the position of the square"""
         if (
