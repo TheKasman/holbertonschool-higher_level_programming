@@ -16,6 +16,16 @@ class Square:
         """Prints the current area of the square"""
         return self.__size ** 2
 
+    def my_print(self):
+        """Prints the square using #"""
+        if self.size == 0:
+            print()
+            return
+        for i in range(self.size):
+            for j in range(self.size):
+                print("#", end="")
+        print()
+
     #  SIZE PROPERTY
     @property
     def size(self):
