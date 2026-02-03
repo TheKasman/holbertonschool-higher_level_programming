@@ -49,7 +49,7 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        """Returns the preimeter of the rectangle"""
+        """Returns the perimeter of the rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
         return (self.width * 2) + (self.height * 2)
@@ -60,16 +60,16 @@ class Rectangle:
             return ""
         for i in range(self.height):
             if i < self.height - 1:
-                print("#" * self.width)
+                print(str(self.print_symbol) * self.width)
             else:
-                print("#" * self.width, end="")
+                print(str(self.print_symbol) * self.width, end="")
 
     def __str__(self):
         """Prints all the invisible text too so you can see what's
         happening under the hood"""
         if self.height == 0 or self.width == 0:
             return ""
-        return "\n".join("#" * self.width for _ in range(self.height))
+        return "\n".join(str(self.print_symbol) * self.width for _ in range(self.height))
 
     def __repr__(self):
         """Returns the copy/paste version of the function
