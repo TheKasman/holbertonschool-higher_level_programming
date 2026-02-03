@@ -49,6 +49,7 @@ class Rectangle:
         return (self.width * 2) + (self.height * 2)
 
     def print(self):
+        """Prints the rectangle"""
         if self.height == 0 or self.width == 0:
             return ""
         for i in range(self.height):
@@ -58,4 +59,8 @@ class Rectangle:
                 print("#" * self.width, end="")
 
     def __str__(self):
+        """Prints all the invisible text too so you can see what's
+        happening under the hood"""
+        if self.height == 0 or self.width == 0:
+            return ""
         return "\n".join("#" * self.width for _ in range(self.height))
