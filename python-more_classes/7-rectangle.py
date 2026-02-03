@@ -57,12 +57,9 @@ class Rectangle:
     def print(self):
         """Prints the rectangle"""
         if self.height == 0 or self.width == 0:
-            return ""
+            return
         for i in range(self.height):
-            if i < self.height - 1:
                 print(str(self.print_symbol) * self.width)
-            else:
-                print(str(self.print_symbol) * self.width, end="")
 
     def __str__(self):
         """Prints all the invisible text too so you can see what's
