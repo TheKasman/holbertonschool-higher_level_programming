@@ -77,13 +77,3 @@ class Rectangle:
         """Prints out a goodbye before deleting the object"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-    @property
-    def print_symbol(self):
-        """Getter for print symbol"""
-        return type(self).print_symbol
-
-    @print_symbol.setter
-    def print_symbol(self, value):
-        """Setter for print symbol"""
-        type(self).print_symbol = value
