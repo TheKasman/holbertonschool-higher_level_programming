@@ -16,6 +16,10 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size):
+        return cls(size, size)
+
     @property
     def width(self):
         """Returns the width"""
@@ -71,7 +75,7 @@ class Rectangle:
 
     def __repr__(self):
         """Returns the copy/paste version of the function
-        if you want to recerate it"""
+        if you want to recreate it"""
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
