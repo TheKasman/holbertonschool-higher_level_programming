@@ -93,12 +93,11 @@ class Rectangle:
         else:
             return rect_2
 
-class Square(Rectangle, size="0"):
+
+class Square(Rectangle):
     """
     Docstring for Square.. it's just a rectangle
     """
-    def __init__(self):
+    def __init__(self, size=0):
         """constructor"""
-        size = size
-        super().__init__ = (size, size)
-        return self
+        super().__init__(size, size)
