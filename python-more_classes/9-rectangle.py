@@ -94,7 +94,11 @@ class Rectangle:
             return rect_2
 
 class Square(Rectangle, size="0"):
+    """
+    Docstring for Square.. it's just a rectangle
+    """
     def __init__(self):
+        """constructor"""
         size = size
         super().__init__ = (size, size)
         return self
