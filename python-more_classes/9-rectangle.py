@@ -98,4 +98,3 @@ class Square(Rectangle, size="0"):
         size = size
         super().__init__ = (size, size)
         return self
-    
