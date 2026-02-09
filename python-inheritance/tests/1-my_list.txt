@@ -1,0 +1,8 @@
+>>> mylist = __import__('1-my_list').MyList
+>>> alist = [1, 2, 3]
+>>> mylist.print_sorted(alist)
+[1, 2, 3]
+>>> mylist.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_sorted() missing 1 required positional argument: 'self'
