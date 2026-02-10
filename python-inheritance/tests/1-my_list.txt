@@ -19,3 +19,8 @@ True
 >>> anewerlist = MyList()
 >>> anewerlist.print_sorted()
 []
+>>> another_list = MyList([3, 1, 2])
+>>> another_list.print_sorted()
+[1, 2, 3]
+>>> print(another_list)
+[3, 1, 2]
