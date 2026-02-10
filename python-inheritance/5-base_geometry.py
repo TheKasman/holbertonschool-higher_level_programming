@@ -3,6 +3,6 @@
 """Base Geometry functions/classes coming in"""
 
 
-class Base_Geometry():
+class BaseGeometry():
     """Base Geometry"""
     pass
