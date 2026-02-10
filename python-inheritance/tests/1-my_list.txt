@@ -8,3 +8,14 @@
 True
 >>> isinstance(my_list, list)
 True
+>>> newlist = MyList()
+>>> newlist.append(1)
+>>> newlist.append(-2)
+>>> newlist.append(3)
+>>> print(newlist)
+[1, -2, 3]
+>>> newlist.print_sorted()
+[-2, 1, 3]
+>>> anewerlist = MyList()
+>>> anewerlist.print_sorted()
+[]
