@@ -1,4 +1,9 @@
 >>> mylist = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> isinstance(my_list, MyList)
+True
+>>> isinstance(my_list, list)
+True
 >>> alist = [1, 2, 3]
 >>> mylist.print_sorted(alist)
 [1, 2, 3]
@@ -6,3 +11,18 @@
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: print_sorted() missing 1 required positional argument: 'self'
+>>> my_list.append(1)
+>>> str(my_list)
+'[1]'
+>>> my_list.append(2)
+>>> my_list.append(-2)
+>>> sorted(my_list)
+[-2, 1, 2]
+>>> alist = []
+>>> sorted(alist)
+[]
+>>> a_new_List = MyList([3, 1, 2])
+>>> MyList.print_sorted(a_new_List)
+[1, 2, 3]
+>>> print(a_new_List)
+[3, 1, 2]
