@@ -5,6 +5,7 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """Shape Abstract class"""
     @abstractmethod
@@ -16,6 +17,7 @@ class Shape(ABC):
     def perimeter(self):
         """the perimeter method"""
         pass
+
 
 class Circle(Shape):
     """Circle class"""
@@ -46,6 +48,7 @@ class Rectangle(Shape):
     def perimeter(self):
         """returns 2(x + y)"""
         return 2 * (self.width + self.height)
+
 
 def shape_info(shape):
     """Prints out information"""
