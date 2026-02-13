@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from abc import ABC
+"""Verbose list Module"""
 
 
 class VerboseList(list):
