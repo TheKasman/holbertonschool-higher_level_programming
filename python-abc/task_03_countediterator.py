@@ -14,9 +14,12 @@ class CountedIterator:
 
     def __next__(self):
         """Return the next item and increment the counter"""
-        item = next(self.iter)
-        self._counter += 1
-        return item
+        try:
+            item = next(self.iter)
+            self._counter += 1
+            return item
+        except StopIteration:
+            raise
 
     def get_count(self):
         """return the counter's value"""
