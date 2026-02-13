@@ -23,4 +23,4 @@ class CountedIterator:
 
     def get_count(self):
         """return the counter's value"""
-        return self.counter
+        return self._counter
