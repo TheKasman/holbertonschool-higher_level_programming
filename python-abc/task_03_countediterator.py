@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+"""Counted iterator module question"""
+
+
+class CountedIterator:
+    """Counted iterator class"""
+    def __init__(self, iterable):
+        self._iter = iter(iterable)
+        self._counter = 0
+
+    def __next__(self):
+        """Return the next item and increment the counter"""
+        item = next(self.iter)
+        self._counter += 1
+        return item
+
+    def get_count(self):
+        """return the counter's value"""
+        return self.counter
