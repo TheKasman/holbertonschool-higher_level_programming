@@ -31,7 +31,7 @@ class Circle(Shape):
 
     def area(self):
         """Returns the area as pi r squared"""
-        return (math.pi * self.radius) ** 2
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """you guessed it, returns 2 pi r"""
