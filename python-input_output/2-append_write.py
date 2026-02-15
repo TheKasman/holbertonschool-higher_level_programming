@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This file.... append to it."""
+"""This file, append to it. It literally appends a file"""
 
 
 def write_file(filename="", text=""):
