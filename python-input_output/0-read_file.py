@@ -7,4 +7,4 @@ def read_file(filename=""):
     """You guessed it. we're reading from a file"""
     with open(filename, encoding="utf-8") as f:
         read_data = f.read()
-    return read_data
+    print(read_data, end="")
