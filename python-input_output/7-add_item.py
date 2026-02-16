@@ -17,3 +17,6 @@ def add_item():
         data.append(x)
 
     saved(data, "add_item.json")
+
+if __name__ == "__main__":
+    add_item()
