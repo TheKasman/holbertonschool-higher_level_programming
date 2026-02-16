@@ -8,9 +8,9 @@ loaded = __import__('6-load_from_json_file').load_from_json_file
 def add_item():
     """Adding items"""
     args = sys.argv[1:]
-    data = loaded("add_item.json")
-
-    if data is None:
+    try:
+        data = loaded("add_item.json")
+    except FileNotFoundError:
         data = []
 
     for x in args:
