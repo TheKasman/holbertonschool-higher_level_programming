@@ -12,4 +12,4 @@ class Student:
 
     def to_json(self):
         """just like the simulations!"""
-        return obj.__dict__
+        return self.__dict__
