@@ -17,4 +17,5 @@ def pascal_triangle(n):
 
             row.append(current_value)
         triangle.append(row)
-        print(row)
+        print(",".join(str(num) for num in row))
+    return triangle
