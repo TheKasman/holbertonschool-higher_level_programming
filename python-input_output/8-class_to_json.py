@@ -4,4 +4,4 @@
 
 def class_to_json(obj):
     """Get the class, and put it in a box"""
-    return obj.__dict__()
+    return obj.__dict__
