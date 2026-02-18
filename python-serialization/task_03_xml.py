@@ -25,7 +25,7 @@ def deserialize_from_xml(filename):
     data_from_xml = {child.tag: child.text for child in root}
 
     #  Data type conversion
-    if "age" in data_from_xml:
-        data_from_xml["age"] = int(data_from_xml["age"])
+    # if "age" in data_from_xml:
+    #     data_from_xml["age"] = int(data_from_xml["age"])
 
     return data_from_xml
