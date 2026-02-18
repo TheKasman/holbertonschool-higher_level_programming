@@ -4,7 +4,7 @@
 import pickle
 
 
-class MyObject:
+class CustomObject:
     """MyObject class"""
     def __init__(self, name, age, is_student):
         self.name = name
@@ -13,8 +13,11 @@ class MyObject:
 
     def serialize(self, filename):
         """It was then called... pickle rick"""
-        with open(filename, "wb", encoding="utf-8") as f:
+        with open(filename, "wb") as f:
             pickle.dump(self, f)
+
+    def display(self):
+        print(f"Name: {self.name}\nAge: {self.age}\nIs Student: {self.is_student}")
 
     @classmethod
     def deserialize(cls, filename):
