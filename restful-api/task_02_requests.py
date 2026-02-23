@@ -11,6 +11,9 @@ def fetch_and_print_posts():
         posts = response.json()
         for post in posts:
             print(post)
+        print("Posts fetched successfully!")
+    else:
+        print("Failed to fetch posts.")
 
 def fetch_and_save_posts():
     """Now we get to save it"""
