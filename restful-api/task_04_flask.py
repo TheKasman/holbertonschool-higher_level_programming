@@ -47,10 +47,10 @@ def create_user():
         return jsonify({"error": "Username is required"}), 400
 
     if username in users:
-        return jsonify({"error": "User already exists"}), 409
+        return jsonify({"error": "Username already exists"}), 409
 
     users[username] = data
-    return jsonify({"message": "User created", "user": users[username]}), 201
+    return jsonify({"message": "User added", "user": users[username]}), 201
 
 
 if __name__ == "__main__":
