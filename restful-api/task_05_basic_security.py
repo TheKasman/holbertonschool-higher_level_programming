@@ -61,8 +61,7 @@ def login():
 def jwt_protected():
     # retrieve the identity stored in the token
     current_user = get_jwt_identity()
-    return jsonify(message="JWT Auth: Access Granted",
-                   user=current_user["username"]), 200
+    return "JWT Auth: Access Granted", 200
 
 
 @jwt.unauthorized_loader
