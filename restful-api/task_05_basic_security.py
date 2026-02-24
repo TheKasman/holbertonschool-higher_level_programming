@@ -37,7 +37,7 @@ def verify_password(username, password):
 @app.route("/basic-protected")
 @auth.login_required
 def basic_protected():
-    return jsonify(message="Basic Auth: Access Granted"), 200
+    return "Basic Auth: Access Granted", 200
 
 
 #  JWT time
