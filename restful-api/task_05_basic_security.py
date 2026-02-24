@@ -39,10 +39,11 @@ def verify_password(username, password):
     return None
 
 
-@app.route("/")
+# Basic af
+@app.route("/basic-protected")
 @auth.login_required
-def index():
-    return "Hello, {}!".format(auth.current_user())
+def basic_protected():
+    return "Basic Auth: Access Granted"
 
 
 #  JWT time
@@ -60,16 +61,15 @@ def login():
     return jsonify({"msg": "Bad credentials"}), 401
 
 
-#  Any user
-@app.route("/protected")
+# JWT-protected route for any user
+@app.route("/jwt-protected")
 @jwt_required()
-def protected():
-    current_user = get_jwt_identity()
-    return jsonify(logged_in_as=current_user)
+def jwt_protected():
+    return "JWT Auth: Access Granted"
 
 
 #  Admin
-@app.route("/admin")
+@app.route("/admin-only")
 @jwt_required()
 def admin_only():
     current_user = get_jwt_identity()
