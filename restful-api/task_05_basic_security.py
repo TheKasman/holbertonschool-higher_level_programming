@@ -59,7 +59,10 @@ def login():
 @app.route("/jwt-protected")
 @jwt_required()
 def jwt_protected():
-    return jsonify(message="JWT Auth: Access Granted"), 200
+    # retrieve the identity stored in the token
+    current_user = get_jwt_identity()
+    return jsonify(message="JWT Auth: Access Granted",
+                   user=current_user["username"]), 200
 
 
 @jwt.unauthorized_loader
