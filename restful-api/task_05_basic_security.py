@@ -62,6 +62,32 @@ def jwt_protected():
     return jsonify(message="JWT Auth: Access Granted"), 200
 
 
+@jwt.unauthorized_loader
+def handle_missing_token(err):
+    return jsonify({"error": "Missing or invalid token"}), 401
+
+
+@jwt.invalid_token_loader
+def handle_invalid_token(err):
+    return jsonify({"error": "Invalid token"}), 401
+
+
+@jwt.expired_token_loader
+def handle_expired_token(jwt_header, jwt_payload):
+    return jsonify({"error": "Token has expired"}), 401
+
+
+@jwt.needs_fresh_token_loader
+def handle_needs_fresh_token(err):
+    return jsonify({"error": "Fresh token required"}), 401
+
+
+@jwt.revoked_token_loader
+def handle_revoked_token(jwt_header, jwt_payload):
+    return jsonify({"error": "Token has been revoked"}), 401
+
+
+
 #  Admin
 @app.route("/admin-only")
 @jwt_required()
