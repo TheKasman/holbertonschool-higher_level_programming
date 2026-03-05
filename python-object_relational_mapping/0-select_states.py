@@ -27,11 +27,14 @@ def main():
     cur = db.cursor()
 
     # THE ACTUAL THING THAT'S IMPORTANT
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
 
     # MORE BOILERPLATE
     for row in cur.fetchall():
-        print(row)
+        print(f"{row[0]}: {row[1]}")
+
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
     main()
