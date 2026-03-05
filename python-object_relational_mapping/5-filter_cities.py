@@ -35,9 +35,10 @@ def main():
         (argument,)
     )
 
-    # MORE BOILERPLATE
-    for rows in cur.fetchall():
-        print(", ".join(row[0] for row in rows))
+    #  MORE BOILERPLATE
+    #  This time is a bit different. as we have to do a different loop
+    rows = cur.fetchall()
+    print(", ".join([row[0] for row in rows]))
 
     cur.close()
     db.close()
