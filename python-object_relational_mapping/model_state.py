@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """State class definition for use in SQLAlchemy"""
+
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
