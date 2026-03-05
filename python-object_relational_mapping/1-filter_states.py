@@ -28,7 +28,9 @@ def main():
     cur = db.cursor()
 
     # THE ACTUAL THING THAT'S IMPORTANT
-    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states "
+                "WHERE BINARY name LIKE 'N%' "
+                "ORDER BY id ASC")
 
     # MORE BOILERPLATE
     for row in cur.fetchall():
