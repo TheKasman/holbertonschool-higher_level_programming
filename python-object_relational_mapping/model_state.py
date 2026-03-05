@@ -15,6 +15,7 @@ class State(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
+
 if __name__ == "__main__":
     #  MYSQL connection
     username = 'root'
@@ -22,5 +23,5 @@ if __name__ == "__main__":
     database = 'hbtn_0e_6_usa'
 
     engine = create_engine(f"mysql+mysqldb://{username}:{password}"
-                        f"@localhost:3306/{database}")
+                           f"@localhost:3306/{database}")
     Base.metadata.create_all(engine)
