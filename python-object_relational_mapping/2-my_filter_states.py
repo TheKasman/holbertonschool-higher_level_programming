@@ -26,7 +26,7 @@ def main():
 
     # THE ACTUAL THING THAT'S IMPORTANT
     cur.execute("SELECT * FROM states "
-                "WHERE name LIKE '{}%' "
+                "WHERE BINARY name LIKE '{}%' "
                 "ORDER BY id ASC".format(argument))
 
     # MORE BOILERPLATE
