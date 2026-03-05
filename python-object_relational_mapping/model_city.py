@@ -3,6 +3,8 @@
 
 from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+from model_state import State
 
 #  All ORM classes inherit from this.
 Base = declarative_base()
@@ -16,6 +18,7 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
 
+    state = relationship("State")
 
 if __name__ == "__main__":
     #  MYSQL connection
