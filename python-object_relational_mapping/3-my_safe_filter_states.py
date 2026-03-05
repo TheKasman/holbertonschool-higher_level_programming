@@ -8,13 +8,10 @@ import MySQLdb
 def main():
     """Get arguments: username, password, database"""
     # TIME FOR BOILERPLATE
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        return
-
     user = sys.argv[1]
     passwrd = sys.argv[2]
     database = sys.argv[3]
+    argument = sys.argv[4]
 
     db = MySQLdb.connect(
         host='localhost',
@@ -28,7 +25,10 @@ def main():
     cur = db.cursor()
 
     # THE ACTUAL THING THAT'S IMPORTANT
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states "
+                "WHERE BINARY name = %s "
+                "ORDER BY id ASC",
+                (argument,))
 
     # MORE BOILERPLATE
     for row in cur.fetchall():
