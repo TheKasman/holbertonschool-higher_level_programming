@@ -20,13 +20,7 @@ if __name__ == "__main__":
     #  This is it. this is the SQL query now.
     state = session.query(State).filter(State.id == 2).first()
 
-    if state is None:
-        # If the state doesn’t exist, create it
-        state = State(name="New Mexico")
-        session.add(state)
-    else:
-        # If it exists, update the name
-        state.name = "New Mexico"
+    state.name = "New Mexico"
 
     session.commit()
     print(state.id)
