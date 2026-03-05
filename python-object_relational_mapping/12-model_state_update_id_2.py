@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """State class definition for use in SQLAlchemy"""
-
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    # MYSQL connection
+    #  MYSQL connection
     USER_NAME = sys.argv[1]
     PASSWORD = sys.argv[2]
     DATABASE = sys.argv[3]
@@ -19,15 +18,15 @@ if __name__ == "__main__":
     session = Session()
 
     #  This is it. this is the SQL query now.
-    state = session.query(State).filter(State.name == "Louisiana").first()
+    state = session.query(State).filter(State.id == 2).first()
 
     if state is None:
-        # Create a new state
-        state = State(name="Louisiana")
+        # If the state doesn’t exist, create it
+        state = State(name="New Mexico")
         session.add(state)
-        session.commit()
-
-    if state:
-        print(state.id)
     else:
-        print("Not found")
+        # If it exists, update the name
+        state.name = "New Mexico"
+
+    session.commit()
+    print(state.id)
