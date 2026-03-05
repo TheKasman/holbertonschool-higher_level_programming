@@ -25,9 +25,9 @@ def main():
     cur = db.cursor()
 
     # THE ACTUAL THING THAT'S IMPORTANT
-    cur.execute(f"SELECT * FROM states "
-                f"WHERE name LIKE '{argument}%' "
-                f"ORDER BY id ASC")
+    cur.execute("SELECT * FROM states "
+                "WHERE name LIKE '{}%' "
+                "ORDER BY id ASC".format(argument))
 
     # MORE BOILERPLATE
     for row in cur.fetchall():
