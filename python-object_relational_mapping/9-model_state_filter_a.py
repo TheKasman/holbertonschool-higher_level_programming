@@ -10,7 +10,6 @@ if __name__ == "__main__":
     USER_NAME = sys.argv[1]
     PASSWORD = sys.argv[2]
     DATABASE = sys.argv[3]
-    NAME = sys.argc[4]
 
     engine = create_engine(f"mysql+mysqldb://{USER_NAME}:{PASSWORD}"
                            f"@localhost:3306/{DATABASE}")
@@ -19,7 +18,9 @@ if __name__ == "__main__":
     session = Session()
 
     #  This is it. this is the SQL query now.
-    state = session.query(State).filter(State.name == NAME)
+    states = session.query(State)\
+        .filter(State.name.like("%a%"))\
+        .order_by(State.id).all()
 
-    if state:
-        print(f"{state.id}")
+    for state in states:
+        print(f"{state.id}: {state.name}")
