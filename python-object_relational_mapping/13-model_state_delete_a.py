@@ -18,11 +18,10 @@ if __name__ == "__main__":
     session = Session()
 
     #  This is it. this is the SQL query now.
-    states = session.query(State)\
+        
+    for state in session.query(State)\
         .filter(State.name.like("%a%"))\
-        .order_by(State.id).all()
-
-    for state in states:
+        .order_by(State.id).all():
         session.delete(state)
 
-    states.commit()
+    session.commit()
