@@ -36,8 +36,8 @@ def main():
     )
 
     # MORE BOILERPLATE
-    for row in cur.fetchall():
-        print(row[0], end=", " if row != cur.fetchall()[-1] else "\n")
+    for rows in cur.fetchall():
+        print(", ".join(row[0] for row in rows))
 
     cur.close()
     db.close()
