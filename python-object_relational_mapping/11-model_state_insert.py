@@ -18,15 +18,15 @@ if __name__ == "__main__":
     session = Session()
 
     #  This is it. this is the SQL query now.
-    state = session.query(State).filter(State.name == "Louisiana").first()
+    state = session.query(State).filter(State.id == 2).first()
 
     if state is None:
-        # Create a new state
-        state = State(name="Louisiana")
+        # If the state doesn’t exist, create it
+        state = State(name="New Mexico")
         session.add(state)
-        session.commit()
+    else:
+        # If it exists, update the name
+        state.name = "New Mexico"
 
     if state:
         print(state.id)
-    else:
-        print("Not found")
