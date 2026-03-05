@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #  This is it. this is the SQL query now.
     states = session.query(State)\
         .filter(State.name.like("%a%"))\
-        .order_by(State.id).first()
+        .order_by(State.id).all()
 
     for state in states:
         print(f"{state.id}: {state.name}")
