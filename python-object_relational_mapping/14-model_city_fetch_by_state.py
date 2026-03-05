@@ -21,6 +21,5 @@ if __name__ == "__main__":
     #  This is it. this is the SQL query now.
     cities = session.query(City).order_by(City.id).all()
 
-    if cities:
-        for city in cities:
-            print(f"{city.state.name}: ({city.id}) {city.name}")
+    for city in cities:
+        print(f"{city.state.name}: ({city.id}) {city.name}")
