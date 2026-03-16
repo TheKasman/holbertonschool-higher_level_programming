@@ -1,6 +1,4 @@
 #!/usr/bin/node
-console.log(process.argv);
-
 const args = process.argv.slice(2);
 
 if (args.length > 1)
